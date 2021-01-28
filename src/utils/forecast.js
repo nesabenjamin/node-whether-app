@@ -7,7 +7,7 @@ const forecast = ( latitude, longitude, callback) => {
         if(error){
             callback( 'Unable to connect to weather service', undefined)
         }else if( body.error){
-            callback('Invalid api parameters', undefined )
+            callback('Invalid search field', undefined )
         }else{
             callback(undefined, {
                'Forecast': body.current.weather_descriptions[0]+` <img style='border-radius:50%' width="20" height="20" src='${body.current.weather_icons}'/>`,

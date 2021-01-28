@@ -5,7 +5,7 @@ const geocode = ( address, callback) => {
         if(error){
             callback( 'Unable to connect to geolocation service', undefined)
         }else if( !body.features.length){
-            callback('Invalid api parameters', undefined )
+            callback('Invalid search field', undefined )
         }else{
             callback(undefined, {
                 'Latitude': body.features[0].center[1],
